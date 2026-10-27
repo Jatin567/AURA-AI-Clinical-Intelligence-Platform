@@ -1,0 +1,450 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-07-21",
+  "description": "AURA Clinical Knowledge Base Repository for Deterministic Reasoning",
+  "conditions": [
+    {
+      "id": "COND_001",
+      "name": "Acute Coronary Syndrome",
+      "category": "Cardiovascular",
+      "icd10_code": "I24.9",
+      "description": "Acute myocardial ischemia or infarction causing chest pressure and systemic cardiovascular symptoms.",
+      "primary_symptoms": ["chest pain", "chest tightness", "chest pressure"],
+      "secondary_symptoms": ["shortness of breath", "dizziness", "nausea", "sweating", "left arm pain", "jaw pain"],
+      "conflicting_symptoms": ["runny nose", "sore throat", "rash"],
+      "risk_modifiers": {
+        "diabetes": 0.25,
+        "hypertension": 0.2,
+        "heart disease": 0.3,
+        "age_over_65": 0.25
+      },
+      "references": [
+        "AHA/ACC 2020 Clinical Practice Guidelines for Acute Coronary Syndromes",
+        "ICD-10-CM Diagnosis Code I24.9"
+      ]
+    },
+    {
+      "id": "COND_002",
+      "name": "Pneumonia",
+      "category": "Respiratory",
+      "icd10_code": "J18.9",
+      "description": "Infection of the pulmonary parenchyma resulting in systemic fever, productive cough, and dyspnea.",
+      "primary_symptoms": ["cough", "fever", "shortness of breath"],
+      "secondary_symptoms": ["chest pain", "chills", "fatigue", "sputum production"],
+      "conflicting_symptoms": ["diarrhea", "rash"],
+      "risk_modifiers": {
+        "asthma": 0.15,
+        "copd": 0.25,
+        "immunocompromised": 0.3,
+        "age_over_65": 0.2,
+        "infant": 0.25
+      },
+      "references": [
+        "IDSA/ATS Consensus Guidelines on the Management of Community-Acquired Pneumonia",
+        "ICD-10-CM Diagnosis Code J18.9"
+      ]
+    },
+    {
+      "id": "COND_003",
+      "name": "Upper Respiratory Tract Infection",
+      "category": "Respiratory",
+      "icd10_code": "J06.9",
+      "description": "Acute viral infection of the upper airway passages involving the nasal mucosa and pharynx.",
+      "primary_symptoms": ["cough", "sore throat", "runny nose"],
+      "secondary_symptoms": ["congestion", "sneezing", "mild fever", "fatigue", "headache"],
+      "conflicting_symptoms": ["severe chest pressure", "paralysis", "blood in stool"],
+      "risk_modifiers": {
+        "asthma": 0.1,
+        "immunocompromised": 0.15
+      },
+      "references": [
+        "CDC Guidelines for Common Cold and Upper Respiratory Infections",
+        "ICD-10-CM Diagnosis Code J06.9"
+      ]
+    },
+    {
+      "id": "COND_004",
+      "name": "Asthma Exacerbation",
+      "category": "Respiratory",
+      "icd10_code": "J45.901",
+      "description": "Acute bronchospasm causing airway hyperresponsiveness, wheezing, and respiratory discomfort.",
+      "primary_symptoms": ["wheezing", "shortness of breath"],
+      "secondary_symptoms": ["cough", "chest tightness", "fatigue"],
+      "conflicting_symptoms": ["fever", "diarrhea", "rash"],
+      "risk_modifiers": {
+        "asthma": 0.35,
+        "allergies": 0.15
+      },
+      "references": [
+        "GINA Global Strategy for Asthma Management and Prevention (2023)",
+        "ICD-10-CM Diagnosis Code J45.901"
+      ]
+    },
+    {
+      "id": "COND_005",
+      "name": "Hypertensive Crisis",
+      "category": "Cardiovascular",
+      "icd10_code": "I16.9",
+      "description": "Severe elevation in blood pressure associated with end-organ dysfunction signs such as headache and visual disturbance.",
+      "primary_symptoms": ["headache", "dizziness", "blurred vision"],
+      "secondary_symptoms": ["chest pain", "shortness of breath", "nausea", "anxiety"],
+      "conflicting_symptoms": ["runny nose", "sore throat", "diarrhea"],
+      "risk_modifiers": {
+        "hypertension": 0.4,
+        "heart disease": 0.25,
+        "age_over_65": 0.15
+      },
+      "references": [
+        "AHA/ACC Guideline for Prevention, Detection, Evaluation, and Management of High Blood Pressure",
+        "ICD-10-CM Diagnosis Code I16.9"
+      ]
+    },
+    {
+      "id": "COND_006",
+      "name": "Hypoglycemia",
+      "category": "Endocrine",
+      "icd10_code": "E16.2",
+      "description": "Abnormally low blood glucose level leading to neuroglycopenic and autonomic symptoms.",
+      "primary_symptoms": ["sweating", "tremor", "dizziness", "confusion"],
+      "secondary_symptoms": ["palpitations", "fatigue", "hunger", "blurred vision", "headache"],
+      "conflicting_symptoms": ["fever", "cough", "sore throat"],
+      "risk_modifiers": {
+        "diabetes": 0.45
+      },
+      "references": [
+        "American Diabetes Association (ADA) Standards of Care in Diabetes (2024)",
+        "ICD-10-CM Diagnosis Code E16.2"
+      ]
+    },
+    {
+      "id": "COND_007",
+      "name": "Anaphylaxis",
+      "category": "Immunology",
+      "icd10_code": "T78.2",
+      "description": "Severe, life-threatening systemic allergic reaction involving airway compromise or vascular collapse.",
+      "primary_symptoms": ["swelling", "shortness of breath", "rash", "wheezing"],
+      "secondary_symptoms": ["hives", "dizziness", "nausea", "abdominal pain", "throat tightness"],
+      "conflicting_symptoms": ["fever", "chronic joint pain"],
+      "risk_modifiers": {
+        "allergies": 0.35,
+        "asthma": 0.2
+      },
+      "references": [
+        "World Allergy Organization (WAO) Anaphylaxis Guidelines 2020",
+        "ICD-10-CM Diagnosis Code T78.2"
+      ]
+    },
+    {
+      "id": "COND_008",
+      "name": "Acute Gastroenteritis",
+      "category": "Gastrointestinal",
+      "icd10_code": "A09",
+      "description": "Acute inflammation of the gastrointestinal tract mucosa causing vomiting, abdominal cramping, and watery stool.",
+      "primary_symptoms": ["nausea", "vomiting", "diarrhea"],
+      "secondary_symptoms": ["abdominal pain", "fever", "chills", "fatigue", "dehydration"],
+      "conflicting_symptoms": ["cough", "chest pain", "shortness of breath"],
+      "risk_modifiers": {
+        "infant": 0.25,
+        "age_over_65": 0.2,
+        "immunocompromised": 0.25
+      },
+      "references": [
+        "ACG Clinical Guideline: Diagnosis, Treatment, and Prevention of Acute Diarrheal Infections",
+        "ICD-10-CM Diagnosis Code A09"
+      ]
+    },
+    {
+      "id": "COND_009",
+      "name": "Migraine",
+      "category": "Neurological",
+      "icd10_code": "G43.909",
+      "description": "Recurrent neurovascular headache characterized by throbbing unilateral pain and sensory sensitivity.",
+      "primary_symptoms": ["headache", "sensitivity to light", "nausea"],
+      "secondary_symptoms": ["sensitivity to sound", "dizziness", "visual aura", "vomiting"],
+      "conflicting_symptoms": ["fever", "cough", "chest pain"],
+      "risk_modifiers": {},
+      "references": [
+        "American Headache Society Consensus Statement on Migraine Treatment",
+        "ICD-10-CM Diagnosis Code G43.909"
+      ]
+    },
+    {
+      "id": "COND_010",
+      "name": "Influenza",
+      "category": "Infectious Disease",
+      "icd10_code": "J11.1",
+      "description": "Acute systemic viral infection caused by influenza virus featuring high fever, myalgias, and respiratory symptoms.",
+      "primary_symptoms": ["fever", "body aches", "fatigue", "chills"],
+      "secondary_symptoms": ["cough", "headache", "sore throat", "congestion"],
+      "conflicting_symptoms": ["chest pain", "paralysis"],
+      "risk_modifiers": {
+        "age_over_65": 0.2,
+        "infant": 0.2,
+        "asthma": 0.15,
+        "diabetes": 0.15,
+        "immunocompromised": 0.25
+      },
+      "references": [
+        "CDC Influenza Clinical Guidelines",
+        "ICD-10-CM Diagnosis Code J11.1"
+      ]
+    },
+    {
+      "id": "COND_011",
+      "name": "Acute Appendicitis",
+      "category": "Gastrointestinal",
+      "icd10_code": "K35.80",
+      "description": "Acute inflammation of the vermiform appendix presenting with periumbilical pain migrating to the right lower quadrant.",
+      "primary_symptoms": ["abdominal pain", "right lower quadrant pain", "nausea"],
+      "secondary_symptoms": ["vomiting", "fever", "loss of appetite"],
+      "conflicting_symptoms": ["cough", "runny nose", "wheezing"],
+      "risk_modifiers": {},
+      "references": [
+        "WSES Jerusalem Guidelines for Diagnosis and Treatment of Acute Appendicitis",
+        "ICD-10-CM Diagnosis Code K35.80"
+      ]
+    },
+    {
+      "id": "COND_012",
+      "name": "Pulmonary Embolism",
+      "category": "Cardiovascular",
+      "icd10_code": "I26.99",
+      "description": "Occlusion of pulmonary arterial vasculature by thrombus, causing acute dyspnea and pleuritic pain.",
+      "primary_symptoms": ["shortness of breath", "chest pain", "rapid heart rate"],
+      "secondary_symptoms": ["cough", "hemoptysis", "dizziness", "leg swelling"],
+      "conflicting_symptoms": ["runny nose", "sore throat"],
+      "risk_modifiers": {
+        "pregnancy": 0.35,
+        "age_over_65": 0.2,
+        "heart disease": 0.25
+      },
+      "references": [
+        "ESC Guidelines for the Diagnosis and Management of Acute Pulmonary Embolism",
+        "ICD-10-CM Diagnosis Code I26.99"
+      ]
+    },
+    {
+      "id": "COND_013",
+      "name": "Cerebrovascular Accident",
+      "category": "Neurological",
+      "icd10_code": "I63.9",
+      "description": "Focal neurological deficit resulting from acute cerebral ischemia or intracranial hemorrhage.",
+      "primary_symptoms": ["facial drooping", "arm weakness", "slurred speech"],
+      "secondary_symptoms": ["confusion", "vision loss", "dizziness", "severe headache"],
+      "conflicting_symptoms": ["fever", "cough", "diarrhea"],
+      "risk_modifiers": {
+        "hypertension": 0.3,
+        "diabetes": 0.2,
+        "heart disease": 0.3,
+        "age_over_65": 0.25
+      },
+      "references": [
+        "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke",
+        "ICD-10-CM Diagnosis Code I63.9"
+      ]
+    },
+    {
+      "id": "COND_014",
+      "name": "Urinary Tract Infection",
+      "category": "Urology",
+      "icd10_code": "N39.0",
+      "description": "Bacterial infection of the urinary tract mucosa causing dysuria, frequency, and urgency.",
+      "primary_symptoms": ["dysuria", "urinary frequency", "urinary urgency"],
+      "secondary_symptoms": ["suprapubic pain", "cloudy urine", "fever", "flank pain"],
+      "conflicting_symptoms": ["cough", "wheezing", "runny nose"],
+      "risk_modifiers": {
+        "diabetes": 0.2,
+        "pregnancy": 0.25,
+        "age_over_65": 0.15
+      },
+      "references": [
+        "EAU Guidelines on Urological Infections",
+        "ICD-10-CM Diagnosis Code N39.0"
+      ]
+    },
+    {
+      "id": "COND_015",
+      "name": "Acute Otitis Media",
+      "category": "ENT",
+      "icd10_code": "H66.90",
+      "description": "Acute bacterial or viral inflammation of the middle ear space.",
+      "primary_symptoms": ["ear pain", "ear pressure"],
+      "secondary_symptoms": ["fever", "hearing loss", "irritability", "runny nose"],
+      "conflicting_symptoms": ["chest pain", "shortness of breath"],
+      "risk_modifiers": {
+        "infant": 0.3
+      },
+      "references": [
+        "AAP Clinical Practice Guideline: Diagnosis and Management of Acute Otitis Media",
+        "ICD-10-CM Diagnosis Code H66.90"
+      ]
+    },
+    {
+      "id": "COND_016",
+      "name": "Acute Bronchitis",
+      "category": "Respiratory",
+      "icd10_code": "J20.9",
+      "description": "Self-limiting inflammation of the large bronchial airways usually secondary to viral infection.",
+      "primary_symptoms": ["cough", "sputum production"],
+      "secondary_symptoms": ["chest discomfort", "fatigue", "mild fever", "wheezing"],
+      "conflicting_symptoms": ["severe chest pain", "paralysis"],
+      "risk_modifiers": {
+        "asthma": 0.2,
+        "copd": 0.25
+      },
+      "references": [
+        "ACCP Guidelines for Diagnosis and Management of Cough",
+        "ICD-10-CM Diagnosis Code J20.9"
+      ]
+    },
+    {
+      "id": "COND_017",
+      "name": "Acute Sinusitis",
+      "category": "ENT",
+      "icd10_code": "J01.90",
+      "description": "Inflammation of the paranasal sinuses lasting less than 4 weeks, characterized by facial pain and purulent nasal discharge.",
+      "primary_symptoms": ["facial pressure", "nasal congestion", "purulent nasal discharge"],
+      "secondary_symptoms": ["headache", "fever", "cough", "dental pain"],
+      "conflicting_symptoms": ["chest pain", "diarrhea"],
+      "risk_modifiers": {
+        "allergies": 0.2
+      },
+      "references": [
+        "AAO-HNS Clinical Practice Guideline: Adult Sinusitis",
+        "ICD-10-CM Diagnosis Code J01.90"
+      ]
+    },
+    {
+      "id": "COND_018",
+      "name": "Streptococcal Pharyngitis",
+      "category": "ENT",
+      "icd10_code": "J02.0",
+      "description": "Acute pharyngeal infection caused by Group A Streptococcus.",
+      "primary_symptoms": ["sore throat", "fever", "tonsillar exudate"],
+      "secondary_symptoms": ["swollen lymph nodes", "headache", "abdominal pain", "nausea"],
+      "conflicting_symptoms": ["cough", "runny nose"],
+      "risk_modifiers": {},
+      "references": [
+        "IDSA Clinical Practice Guideline for Diagnosis and Management of Group A Streptococcal Pharyngitis",
+        "ICD-10-CM Diagnosis Code J02.0"
+      ]
+    },
+    {
+      "id": "COND_019",
+      "name": "Acute Cholecystitis",
+      "category": "Gastrointestinal",
+      "icd10_code": "K81.0",
+      "description": "Acute inflammation of the gallbladder, typically resulting from cystic duct obstruction by a gallstone.",
+      "primary_symptoms": ["right upper quadrant pain", "fever", "nausea"],
+      "secondary_symptoms": ["vomiting", "biliary colic", "jaundice"],
+      "conflicting_symptoms": ["cough", "runny nose", "wheezing"],
+      "risk_modifiers": {
+        "pregnancy": 0.2,
+        "age_over_65": 0.15
+      },
+      "references": [
+        "Tokyo Guidelines 2018 for Management of Acute Cholecystitis",
+        "ICD-10-CM Diagnosis Code K81.0"
+      ]
+    },
+    {
+      "id": "COND_020",
+      "name": "Gastroesophageal Reflux Disease",
+      "category": "Gastrointestinal",
+      "icd10_code": "K21.9",
+      "description": "Chronic mucosal exposure to acidic stomach contents causing pyrosis and regurgitation.",
+      "primary_symptoms": ["heartburn", "acid regurgitation"],
+      "secondary_symptoms": ["chest discomfort", "dysphagia", "chronic cough", "sore throat"],
+      "conflicting_symptoms": ["fever", "chills", "rash"],
+      "risk_modifiers": {},
+      "references": [
+        "ACG Clinical Guideline for the Diagnosis and Management of Gastroesophageal Reflux Disease",
+        "ICD-10-CM Diagnosis Code K21.9"
+      ]
+    },
+    {
+      "id": "COND_021",
+      "name": "Allergic Rhinitis",
+      "category": "Immunology",
+      "icd10_code": "J30.9",
+      "description": "IgE-mediated inflammation of the nasal mucosa induced by environmental allergen exposure.",
+      "primary_symptoms": ["sneezing", "runny nose", "nasal itching"],
+      "secondary_symptoms": ["watery eyes", "congestion", "fatigue"],
+      "conflicting_symptoms": ["fever", "severe chest pain"],
+      "risk_modifiers": {
+        "allergies": 0.35,
+        "asthma": 0.2
+      },
+      "references": [
+        "AAO-HNS Clinical Practice Guideline: Allergic Rhinitis",
+        "ICD-10-CM Diagnosis Code J30.9"
+      ]
+    },
+    {
+      "id": "COND_022",
+      "name": "Tension Headache",
+      "category": "Neurological",
+      "icd10_code": "G44.209",
+      "description": "Common primary headache disorder presenting with bilateral band-like pericranial tightness.",
+      "primary_symptoms": ["headache", "neck tightness"],
+      "secondary_symptoms": ["scalp tenderness", "fatigue", "mild noise sensitivity"],
+      "conflicting_symptoms": ["fever", "vomiting", "visual loss"],
+      "risk_modifiers": {},
+      "references": [
+        "ICHD-3 Classification of Tension-Type Headache",
+        "ICD-10-CM Diagnosis Code G44.209"
+      ]
+    },
+    {
+      "id": "COND_023",
+      "name": "Acute Pancreatitis",
+      "category": "Gastrointestinal",
+      "icd10_code": "K85.9",
+      "description": "Acute inflammatory process of the pancreas presenting with severe epigastric pain radiating to the back.",
+      "primary_symptoms": ["epigastric pain", "nausea", "vomiting"],
+      "secondary_symptoms": ["fever", "abdominal distension", "rapid pulse"],
+      "conflicting_symptoms": ["cough", "runny nose"],
+      "risk_modifiers": {
+        "age_over_65": 0.15
+      },
+      "references": [
+        "ACG Clinical Guideline: Management of Acute Pancreatitis",
+        "ICD-10-CM Diagnosis Code K85.9"
+      ]
+    },
+    {
+      "id": "COND_024",
+      "name": "Nephrolithiasis",
+      "category": "Urology",
+      "icd10_code": "N20.0",
+      "description": "Formation of crystalline mineral deposits in the urinary tract causing severe colicky flank pain.",
+      "primary_symptoms": ["flank pain", "hematuria"],
+      "secondary_symptoms": ["nausea", "vomiting", "dysuria", "urinary urgency"],
+      "conflicting_symptoms": ["cough", "runny nose", "wheezing"],
+      "risk_modifiers": {},
+      "references": [
+        "AUA/Endourological Society Guideline for Surgical Management of Stones",
+        "ICD-10-CM Diagnosis Code N20.0"
+      ]
+    },
+    {
+      "id": "COND_025",
+      "name": "Cellulitis",
+      "category": "Dermatology",
+      "icd10_code": "L03.90",
+      "description": "Acute bacterial infection of the deep dermis and subcutaneous tissues.",
+      "primary_symptoms": ["skin redness", "skin warmth", "skin swelling"],
+      "secondary_symptoms": ["skin tenderness", "fever", "chills"],
+      "conflicting_symptoms": ["cough", "runny nose", "chest tightness"],
+      "risk_modifiers": {
+        "diabetes": 0.3,
+        "immunocompromised": 0.3,
+        "age_over_65": 0.15
+      },
+      "references": [
+        "IDSA Practice Guidelines for the Diagnosis and Management of Skin and Soft Tissue Infections",
+        "ICD-10-CM Diagnosis Code L03.90"
+      ]
+    }
+  ]
+}

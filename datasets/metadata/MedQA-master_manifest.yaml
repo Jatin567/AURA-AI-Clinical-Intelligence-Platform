@@ -1,0 +1,5 @@
+dataset: MedQA-master
+description: Automatically ingested dataset classified as qa
+schema_version: '1.0'
+tags:
+- qa

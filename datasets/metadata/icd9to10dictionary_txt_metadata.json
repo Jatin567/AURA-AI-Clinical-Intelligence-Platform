@@ -1,0 +1,10 @@
+{
+  "id": "icd9to10dictionary_txt",
+  "name": "icd9to10dictionary.txt",
+  "version": "1.0",
+  "category": "terminology",
+  "date_added": "2026-08-02T19:35:23.889606",
+  "status": "raw_ingested",
+  "file_size": 1025586,
+  "checksum_sha256": "8477e8c0f9cdc0911c01edbf5266f2d792890c7fecf6469bfb4494f49da56009"
+}

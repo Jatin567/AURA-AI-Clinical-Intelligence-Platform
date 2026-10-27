@@ -1,0 +1,13 @@
+workflow: medication_review
+version: "1.0"
+created_at: "2026-08-03"
+compatible_api: "v2"
+steps:
+  - execute_parallel:
+      - retrieve_medications
+      - retrieve_guidelines
+      - retrieve_timeline
+  - execute_sequential:
+      - check_interactions
+      - clinical_interpretation
+      - generate_response

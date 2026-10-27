@@ -1,0 +1,5 @@
+dataset: mplus_topics_2026-08-01.xml
+description: Automatically ingested dataset classified as guidelines
+schema_version: '1.0'
+tags:
+- guidelines

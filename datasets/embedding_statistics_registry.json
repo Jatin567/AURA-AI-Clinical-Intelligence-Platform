@@ -1,0 +1,11 @@
+{
+  "total_embeddings": 0,
+  "coverage_percentage": 0.0,
+  "duplicate_count": 0,
+  "dimensions": 384,
+  "generation_time_ms": 0.0,
+  "failures": 0,
+  "model_usage": {
+    "local_sentence_transformer": 0
+  }
+}

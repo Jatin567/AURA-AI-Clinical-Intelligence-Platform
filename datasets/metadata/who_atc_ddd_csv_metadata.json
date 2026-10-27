@@ -1,0 +1,10 @@
+{
+  "id": "who_atc_ddd_csv",
+  "name": "who_atc_ddd.csv",
+  "version": "1.0",
+  "category": "drugs",
+  "date_added": "2026-08-02T19:52:33.715301",
+  "status": "raw_ingested",
+  "file_size": 275213,
+  "checksum_sha256": "a455a5af76f340365dcaebf81389632611b528f4e9a4a7ecda44bb6b7a4f3e04"
+}

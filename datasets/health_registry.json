@@ -1,0 +1,36 @@
+{
+  "datasets": {
+    "41586_2023_6291_MOESM6_ESM": {
+      "metrics": {
+        "coverage": 100.0,
+        "missing_percentage": 0.0,
+        "duplicate_percentage": 0.0,
+        "null_percentage": 0.0,
+        "quality_score": 100.0
+      },
+      "status": {
+        "processing_status": "completed",
+        "embedding_status": "ready",
+        "index_status": "pending",
+        "knowledge_graph_status": "ready"
+      },
+      "last_validation": "2026-08-02T15:21:47.280583"
+    },
+    "clin_trials": {
+      "metrics": {
+        "coverage": 100.0,
+        "missing_percentage": 2.1880957612448038,
+        "duplicate_percentage": 0.0,
+        "null_percentage": 2.1880957612448038,
+        "quality_score": 97.81190423875519
+      },
+      "status": {
+        "processing_status": "processing",
+        "embedding_status": "pending",
+        "index_status": "pending",
+        "knowledge_graph_status": "pending"
+      },
+      "last_validation": "2026-08-02T15:22:19.844286"
+    }
+  }
+}

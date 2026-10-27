@@ -1,0 +1,10 @@
+{
+  "id": "clin_trials_csv",
+  "name": "clin_trials.csv",
+  "version": "1.0",
+  "category": "research",
+  "date_added": "2026-08-02T19:21:06.169044",
+  "status": "raw_ingested",
+  "file_size": 409762769,
+  "checksum_sha256": "77be4a38e54d1a78798f50a891deaeb65fc02b2cb57e57e11e88147339c151c0"
+}

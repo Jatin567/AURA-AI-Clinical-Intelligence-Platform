@@ -1,0 +1,10 @@
+{
+  "id": "ICD10codes_csv",
+  "name": "ICD10codes.csv",
+  "version": "1.0",
+  "category": "terminology",
+  "date_added": "2026-08-02T19:35:17.050780",
+  "status": "raw_ingested",
+  "file_size": 14652143,
+  "checksum_sha256": "f0259b9fdbe7bdea3de57801736e1188102be708cfdfcae051dcf4f4650be21a"
+}

@@ -1,0 +1,5 @@
+dataset: drug-labels
+description: Automatically ingested dataset classified as labs
+schema_version: '1.0'
+tags:
+- labs

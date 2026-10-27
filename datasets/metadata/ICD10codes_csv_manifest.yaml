@@ -1,0 +1,5 @@
+dataset: ICD10codes.csv
+description: Automatically ingested dataset classified as terminology
+schema_version: '1.0'
+tags:
+- terminology

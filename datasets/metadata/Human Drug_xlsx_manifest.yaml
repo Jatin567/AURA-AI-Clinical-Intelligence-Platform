@@ -1,0 +1,5 @@
+dataset: Human Drug.xlsx
+description: Automatically ingested dataset classified as drugs
+schema_version: '1.0'
+tags:
+- drugs

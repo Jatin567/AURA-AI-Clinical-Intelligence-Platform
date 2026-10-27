@@ -1,0 +1,272 @@
+{
+  "version": "1.0.0",
+  "description": "AURA Evidence-Driven Adaptive Question Bank",
+  "questions": [
+    {
+      "question_id": "Q_ACS_001",
+      "text": "Does your chest pain or pressure radiate to your left arm, shoulder, neck, or jaw?",
+      "input_type": "yes_no",
+      "purpose": "Differentiate myocardial ischemia (ACS) from non-cardiac chest pain (GERD/Musculoskeletal).",
+      "target_evidence_key": "chest_pain_radiation",
+      "target_condition_ids": ["COND_001", "COND_020"],
+      "evidence_mapping": {
+        "yes": ["left arm pain", "jaw pain"],
+        "no": []
+      },
+      "priority_tier": "CRITICAL_RED_FLAG",
+      "base_information_gain": 0.85
+    },
+    {
+      "question_id": "Q_ACS_002",
+      "text": "Does the chest pain get worse with physical exertion and feel relieved when resting?",
+      "input_type": "yes_no",
+      "purpose": "Evaluate exertional demand ischemia characteristic of Angina / ACS.",
+      "target_evidence_key": "exertional_chest_pain",
+      "target_condition_ids": ["COND_001", "COND_020"],
+      "evidence_mapping": {
+        "yes": ["chest tightness"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.78
+    },
+    {
+      "question_id": "Q_PNEU_001",
+      "text": "Are you coughing up thick, yellow, green, or rust-colored sputum?",
+      "input_type": "yes_no",
+      "purpose": "Distinguish lower respiratory infection (Pneumonia) from viral upper respiratory infection or asthma.",
+      "target_evidence_key": "sputum_production",
+      "target_condition_ids": ["COND_002", "COND_003", "COND_004"],
+      "evidence_mapping": {
+        "yes": ["sputum production", "cough"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.72
+    },
+    {
+      "question_id": "Q_STROKE_001",
+      "text": "Are you experiencing sudden weakness or numbness on one side of your face or body?",
+      "input_type": "yes_no",
+      "purpose": "Screen for acute cerebrovascular accident (Stroke / TIA).",
+      "target_evidence_key": "focal_neurological_deficit",
+      "target_condition_ids": ["COND_013", "COND_009"],
+      "evidence_mapping": {
+        "yes": ["facial drooping", "arm weakness"],
+        "no": []
+      },
+      "priority_tier": "CRITICAL_RED_FLAG",
+      "base_information_gain": 0.92
+    },
+    {
+      "question_id": "Q_ANAPH_001",
+      "text": "Do you notice any swelling of your lips, tongue, face, or difficulty swallowing?",
+      "input_type": "yes_no",
+      "purpose": "Screen for life-threatening airway compromise in anaphylaxis.",
+      "target_evidence_key": "angioedema",
+      "target_condition_ids": ["COND_007", "COND_021"],
+      "evidence_mapping": {
+        "yes": ["swelling", "throat tightness"],
+        "no": []
+      },
+      "priority_tier": "CRITICAL_RED_FLAG",
+      "base_information_gain": 0.90
+    },
+    {
+      "question_id": "Q_PE_001",
+      "text": "Does the chest pain get sharply worse when taking a deep breath in?",
+      "input_type": "yes_no",
+      "purpose": "Assess pleuritic chest pain associated with Pulmonary Embolism or Pleurisy.",
+      "target_evidence_key": "pleuritic_chest_pain",
+      "target_condition_ids": ["COND_012", "COND_001", "COND_002"],
+      "evidence_mapping": {
+        "yes": ["chest pain"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.80
+    },
+    {
+      "question_id": "Q_PE_002",
+      "text": "Have you noticed painful swelling or redness in one of your calves or legs?",
+      "input_type": "yes_no",
+      "purpose": "Identify deep vein thrombosis (DVT) as source of pulmonary embolism.",
+      "target_evidence_key": "unilateral_calf_swelling",
+      "target_condition_ids": ["COND_012"],
+      "evidence_mapping": {
+        "yes": ["leg swelling"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.75
+    },
+    {
+      "question_id": "Q_GERD_001",
+      "text": "Do you feel a burning sensation in your chest after meals that worsens when lying down?",
+      "input_type": "yes_no",
+      "purpose": "Confirm gastroesophageal acid reflux (GERD) pattern.",
+      "target_evidence_key": "postprandial_heartburn",
+      "target_condition_ids": ["COND_020", "COND_001"],
+      "evidence_mapping": {
+        "yes": ["heartburn", "acid regurgitation"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.70
+    },
+    {
+      "question_id": "Q_APP_001",
+      "text": "Did your abdominal pain start around your belly button and move to the right lower side?",
+      "input_type": "yes_no",
+      "purpose": "Identify classic migration pattern of acute appendicitis pain.",
+      "target_evidence_key": "rlq_migrating_pain",
+      "target_condition_ids": ["COND_011", "COND_008"],
+      "evidence_mapping": {
+        "yes": ["right lower quadrant pain", "abdominal pain"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.82
+    },
+    {
+      "question_id": "Q_UTI_001",
+      "text": "Do you feel a burning sensation when urinating or an constant urgent need to urinate?",
+      "input_type": "yes_no",
+      "purpose": "Detect acute lower urinary tract mucosal irritation.",
+      "target_evidence_key": "dysuria",
+      "target_condition_ids": ["COND_014", "COND_024"],
+      "evidence_mapping": {
+        "yes": ["dysuria", "urinary frequency", "urinary urgency"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.76
+    },
+    {
+      "question_id": "Q_KIDNEY_001",
+      "text": "Is your pain severe and located in your flank/back, coming in intense waves radiating to your lower abdomen?",
+      "input_type": "yes_no",
+      "purpose": "Identify colicky renal flank pain characteristic of nephrolithiasis.",
+      "target_evidence_key": "flank_pain_radiation",
+      "target_condition_ids": ["COND_024", "COND_014"],
+      "evidence_mapping": {
+        "yes": ["flank pain", "hematuria"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.81
+    },
+    {
+      "question_id": "Q_MIG_001",
+      "text": "Is your headache accompanied by visual disturbances (like flashing lights or zigzag patterns) or extreme sensitivity to light?",
+      "input_type": "yes_no",
+      "purpose": "Differentiate migraine with aura from tension-type headache.",
+      "target_evidence_key": "photophobia_aura",
+      "target_condition_ids": ["COND_009", "COND_022"],
+      "evidence_mapping": {
+        "yes": ["sensitivity to light", "visual aura"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.74
+    },
+    {
+      "question_id": "Q_CHOLE_001",
+      "text": "Is your abdominal pain located in the right upper side under your ribs, especially after eating fatty foods?",
+      "input_type": "yes_no",
+      "purpose": "Assess acute cholecystitis / biliary colic.",
+      "target_evidence_key": "ruq_biliary_pain",
+      "target_condition_ids": ["COND_019", "COND_023"],
+      "evidence_mapping": {
+        "yes": ["right upper quadrant pain", "biliary colic"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.77
+    },
+    {
+      "question_id": "Q_PANC_001",
+      "text": "Does your upper stomach pain feel severe and radiate straight through to your back?",
+      "input_type": "yes_no",
+      "purpose": "Identify severe epigastric-to-back pain characteristic of acute pancreatitis.",
+      "target_evidence_key": "epigastric_back_pain",
+      "target_condition_ids": ["COND_023", "COND_019", "COND_020"],
+      "evidence_mapping": {
+        "yes": ["epigastric pain"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.79
+    },
+    {
+      "question_id": "Q_SINUS_001",
+      "text": "Do you have painful pressure around your forehead, eyes, or cheeks that worsens when bending forward?",
+      "input_type": "yes_no",
+      "purpose": "Distinguish acute rhinosinusitis from generalized viral URTI.",
+      "target_evidence_key": "sinus_pressure_postural",
+      "target_condition_ids": ["COND_017", "COND_003"],
+      "evidence_mapping": {
+        "yes": ["facial pressure", "purulent nasal discharge"],
+        "no": []
+      },
+      "priority_tier": "SYMPTOM_REFINEMENT",
+      "base_information_gain": 0.65
+    },
+    {
+      "question_id": "Q_STREP_001",
+      "text": "Do you have a sudden severe sore throat with fever and swollen neck glands, BUT NO cough?",
+      "input_type": "yes_no",
+      "purpose": "Evaluate Centor criteria for Streptococcal pharyngitis.",
+      "target_evidence_key": "strep_pharyngitis_triad",
+      "target_condition_ids": ["COND_018", "COND_003"],
+      "evidence_mapping": {
+        "yes": ["sore throat", "fever", "tonsillar exudate"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.73
+    },
+    {
+      "question_id": "Q_CELL_001",
+      "text": "Is the red area on your skin hot to the touch, swollen, tender, and spreading in size?",
+      "input_type": "yes_no",
+      "purpose": "Identify spreading deep cutaneous cellulitis infection.",
+      "target_evidence_key": "spreading_erythema",
+      "target_condition_ids": ["COND_025"],
+      "evidence_mapping": {
+        "yes": ["skin redness", "skin warmth", "skin swelling"],
+        "no": []
+      },
+      "priority_tier": "DIFFERENTIAL_DISCRIMINATOR",
+      "base_information_gain": 0.80
+    },
+    {
+      "question_id": "Q_GEN_001",
+      "text": "How many days ago did your main symptoms first begin?",
+      "input_type": "single_select",
+      "options": ["Today (Less than 24 hours)", "1-3 days ago", "4-7 days ago", "More than 1 week ago"],
+      "purpose": "Establish symptom onset velocity to separate hyperacute emergencies from subacute/chronic conditions.",
+      "target_evidence_key": "symptom_duration",
+      "target_condition_ids": ["COND_001", "COND_002", "COND_003", "COND_012", "COND_013"],
+      "evidence_mapping": {
+        "Today (Less than 24 hours)": ["sudden"],
+        "1-3 days ago": ["days"],
+        "4-7 days ago": ["days"],
+        "More than 1 week ago": ["weeks"]
+      },
+      "priority_tier": "MISSING_DATA_RECOVERY",
+      "base_information_gain": 0.68
+    },
+    {
+      "question_id": "Q_GEN_002",
+      "text": "On a scale of 1 to 10, how severe is your discomfort right now?",
+      "input_type": "number",
+      "purpose": "Quantify subjective patient pain and physiological distress.",
+      "target_evidence_key": "symptom_severity",
+      "target_condition_ids": [],
+      "evidence_mapping": {},
+      "priority_tier": "MISSING_DATA_RECOVERY",
+      "base_information_gain": 0.60
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "global_statistics": {
+    "total_datasets": 0,
+    "total_records": 0,
+    "total_chunks": 0,
+    "total_relationships": 0,
+    "total_entities": 0
+  },
+  "knowledge_coverage": {
+    "diseases": 0,
+    "symptoms": 0,
+    "medications": 0,
+    "interactions": 0,
+    "laboratory_tests": 0,
+    "imaging_studies": 0,
+    "clinical_guidelines": 0,
+    "emergency_conditions": 0,
+    "preventive_care": 0,
+    "patient_education": 0,
+    "research_coverage": 0
+  },
+  "dataset_statistics": {}
+}

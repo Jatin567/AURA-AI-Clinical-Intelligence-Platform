@@ -1,0 +1,10 @@
+{
+  "id": "Human Drug_xlsx",
+  "name": "Human Drug.xlsx",
+  "version": "1.0",
+  "category": "drugs",
+  "date_added": "2026-08-02T19:35:14.363072",
+  "status": "raw_ingested",
+  "file_size": 51254,
+  "checksum_sha256": "a571135136c6c9486365f7b62f6d6855556b289c990721a30637d0661bd47b50"
+}

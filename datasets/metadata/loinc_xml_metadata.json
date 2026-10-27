@@ -1,0 +1,10 @@
+{
+  "id": "loinc_xml",
+  "name": "loinc.xml",
+  "version": "1.0",
+  "category": "labs",
+  "date_added": "2026-08-02T19:35:24.470771",
+  "status": "raw_ingested",
+  "file_size": 34254,
+  "checksum_sha256": "7365fba162ec1f1bc78a3f5abd758a9fb3d5efba496c762d252be775d6bc6e52"
+}

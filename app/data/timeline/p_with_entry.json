@@ -1,0 +1,1 @@
+[{"assessment_id": "test_a1", "patient_id": "p_with_entry", "timestamp": "2026-10-04T14:48:32.693833Z", "chief_complaint": "Severe headache", "symptoms": ["Headache", "Fever"], "severity": "URGENT", "top_condition": "Migraine", "top_confidence": null, "possible_conditions": [], "recommendation": "Rest in a quiet room", "report_reference": null}]

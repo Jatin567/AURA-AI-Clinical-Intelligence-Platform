@@ -1,0 +1,5 @@
+dataset: clin_trials.csv
+description: Automatically ingested dataset classified as research
+schema_version: '1.0'
+tags:
+- research

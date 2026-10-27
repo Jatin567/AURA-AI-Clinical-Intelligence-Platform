@@ -1,0 +1,6 @@
+workflow: general_chat
+version: "1.0"
+steps:
+  - execute_sequential:
+      - knowledge_retrieval
+      - generate_response
